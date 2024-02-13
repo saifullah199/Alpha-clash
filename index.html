@@ -11,15 +11,15 @@
 <body>
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home screen -->
-        <section class="home min-h-screen text-white flex justify-center items-center hidden">
+        <section id="home-screen" class=" min-h-screen text-white flex justify-center items-center ">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="text-8xl text-white uppercase "> Alpha Clash Pro</h1>
             <p> Unleash Your Keyboard Kun g Fu : Press " Enter to Play"</p>
-            <button class="btn text-black bg-white"> Play</button>
+            <button onclick="play()" class="btn text-black bg-white"> Play</button>
             </div>
         </section>
         <!-- playground start -->
-        <section class="playground">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!-- screen -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#111111CC] bg-[#FFFFFFB3]">
@@ -86,10 +86,18 @@
             </div>
         </section>
         <!-- playground end -->
-        <section class="score">
-            
+        <section class="score flex justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg ">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold"> Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p>Practise will make you a Pro</p>
+            </div>
         </section>
     </main>
-    
+    <script src="utility.js"></script>
+    <script src="alpha-clash.js"></script>
 </body>
 </html>
